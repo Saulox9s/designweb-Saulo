@@ -1,0 +1,132 @@
+@import 'design.scss';
+
+/** =====================
+ * Breakpoints
+ * ===================== */
+$break-desktop: 1200px;
+$break-tablet: 768px;
+
+/** =====================
+ * Flexbox utilitário
+ * ===================== */
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+/** =====================
+ * Containers
+ * ===================== */
+.container {
+  max-width: $break-desktop;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/** =====================
+ * Header / Navegação
+ * ===================== */
+.header {
+  background-color: $color-bg-header;
+  padding: 0 100px;
+  height: 74px;
+  border-radius: 6px;
+  margin-bottom: 64px;
+  @include flex(row, center, center);
+}
+
+.nav-menu {
+  @include flex(row, flex-start, center, 32px);
+
+  & a {
+    @extend .body-2;
+  }
+}
+
+.nav-social {
+  @include flex(row, flex-start, center, 32px);
+
+  & a {
+    font-size: 20px;
+  }
+}
+
+.display-flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+}
+
+/** =====================
+ * Hero Section
+ * ===================== */
+.hero {
+  @include flex(row, space-between, center, 32px);
+  margin-bottom: 64px;
+
+  &__content {
+    max-width: 568px;
+  }
+
+  &__image {
+    width: 350px;
+    height: 350px;
+    @extend .image-round;
+  }
+}
+
+/** =====================
+ * Jobs Section
+ * ===================== */
+.jobs {
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__list {
+    @include flex(row, center, center, 32px);
+    flex-wrap: wrap;
+
+    li {
+      width: 160px;
+      height: 60px;
+      @include flex(center, center, center);
+    }
+  }
+}
+
+/** =====================
+ * Responsividade
+ * ===================== */
+@media (max-width: $break-tablet) {
+  .header {
+    padding: 0 20px;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+
+    &__image {
+      width: 250px;
+      height: 250px;
+      margin-top: 20px;
+    }
+  }
+
+  .jobs {
+    padding: 0 20px;
+
+    &__list {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+}

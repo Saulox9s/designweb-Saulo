@@ -1,15 +1,113 @@
-/**    Especificando as fontes */
-$font-titulo : "Raleway", sans-serif;
-$font-texto : "IBM Plex Mono", monospace;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-/**    Especificando cores */
-$cor-bg-body: #1B1B1B;
-$cor-bg-button: #3F8E00;
-$cor-text-title: #FFFFFF;
-$cor-text-body: #9C9C9C;
-$cor-border-button: #62BA1B;
+/** =====================
+ * Variáveis
+ * ===================== */
+$font-title: "Raleway", sans-serif;
+$font-text: "IBM Plex Mono", monospace;
 
-body{
-    font: $font-texto;
+$color-bg-body: #080808;
+$color-bg-header: #1B1B1B;
+$color-text-body: #9C9C9C;
+$color-bg-button: #3F8E00;
+$color-border-button: #62BA1B;
+$color-text-title: #FFFFFF;
 
+/** =====================
+ * Tipografia
+ * ===================== */
+.heading {
+  font-family: $font-title;
+  color: $color-text-title;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.heading-1 {
+  @extend .heading;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.heading-2 {
+  @extend .heading;
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 1.3;
+}
+
+.body-1 {
+  font-family: $font-text;
+  font-size: 16px;
+  font-weight: 700;
+  color: $color-text-title;
+  line-height: 1.6;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.body-2 {
+  font-family: $font-text;
+  font-size: 14px;
+  font-weight: 400;
+  color: $color-text-body;
+  line-height: 1.6;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+/** =====================
+ * Botões
+ * ===================== */
+@mixin button-style {
+  padding: 16px 64px;
+  height: 64px;
+  background-color: $color-bg-button;
+  border: 2px solid $color-border-button;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: $font-text;
+  font-weight: 700;
+  font-size: 16px;
+  color: $color-text-title;
+  box-shadow: 0 8px 30px rgba(63,142,0,0.5);
+  transition: transform 0.1s ease;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.button-primary {
+  @include button-style;
+}
+
+/** =====================
+ * Imagens arredondadas
+ * ===================== */
+.image-round {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/** =====================
+ * Reset / Global
+ * ===================== */
+body {
+  margin: 0;
+  font-family: $font-text;
+  background-color: $color-bg-body;
+  color: $color-text-body;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
