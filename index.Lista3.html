@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento de Seções</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 py-10">
+    <!-- Seção de Apresentação com Duas Colunas -->
+    <section class="max-w-6xl mx-auto bg-white shadow-inner border-t border-gray-200 p-8 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"> <!-- Grid para duas colunas, centralização vertical -->
+            <!-- Lado Esquerdo: Texto -->
+            <div class="space-y-4"> <!-- Espaçamento vertical consistente -->
+                <h1 class="text-4xl font-bold text-gray-900">Título da Apresentação</h1>
+                <h2 class="text-xl font-semibold text-gray-600">Subtítulo Secundário</h2>
+                <p class="text-base text-gray-600 leading-relaxed">Este é o texto de apresentação. Ele descreve o conteúdo da seção, com espaçamentos equilibrados e hierarquia visual clara. O layout usa grid para alinhamento preciso entre blocos.</p>
+            </div>
+            <!-- Lado Direito: Imagem -->
+            <div class="flex justify-center"> <!-- Centralização horizontal da imagem -->
+                <img src="https://fastly.picsum.photos/id/790/400/400.jpg?hmac=v2R9XxpgluyM9IhjaWfzJl-Yh8Un56a7lU91CJ_FGz0" alt="Imagem placeholder" class="rounded-lg shadow-md max-w-full h-auto">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Outra Seção Exemplo (para demonstrar bordas/sombras entre seções) -->
+    <section class="max-w-6xl mx-auto bg-white shadow-inner border-t border-gray-200 p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-4">
+                <h1 class="text-4xl font-bold text-gray-900">Segunda Seção</h1>
+                <p class="text-base text-gray-600 leading-relaxed">Esta seção demonstra consistência visual, com bordas sutis (border-t) e sombras (shadow-inner) separando blocos.</p>
+            </div>
+            <div class="flex justify-center">
+                <img src="https://fastly.picsum.photos/id/790/400/400.jpg?hmac=v2R9XxpgluyM9IhjaWfzJl-Yh8Un56a7lU91CJ_FGz0" alt="Outra imagem placeholder" class="rounded-lg shadow-md max-w-full h-auto">
+            </div>
+        </div>
+    </section>
+    
+    <!-- 
+    ESTRUTURA ESCOLHIDA: GRID
+    Escolhi grid (grid-cols-2) em vez de flex porque oferece controle mais preciso para layouts de coluna fixa lado a lado, facilitando o alinhamento vertical (items-center) e espaçamento (gap-8) sem necessidade de ajustes manuais. Flex seria uma alternativa viável para layouts mais flexíveis, mas grid é ideal aqui para consistência em telas maiores (md:). Isso garante alinhamento preciso e responsividade.
+    -->
+
+    <!--acabei usando esse estilo de class por conta que eu estava esquecendo de quais comandos usar.-->
+</body>
+</html>
