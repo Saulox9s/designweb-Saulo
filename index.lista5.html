@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'raleway': ['Raleway', 'sans-serif'],
+                        'ibm-plex-mono': ['IBM Plex Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white font-raleway">
+
+
+    <header class="bg-black py-4 px-4 sm:px-6 md:px-12 lg:px-16">
+        <nav class="flex justify-between items-center max-w-7xl mx-auto">
+            <ul class="flex space-x-4 sm:space-x-6 md:space-x-8 text-sm font-medium">
+                <li><a href="#" class="hover:text-gray-300 transition">Estudos de caso</a></li>
+                <li><a href="#" class="hover:text-gray-300 transition">Trabalhos</a></li>
+                <li><a href="#" class="hover:text-gray-300 transition">Entre em contato</a></li>
+            </ul>
+            <ul class="flex space-x-3 sm:space-x-4">
+                <li>
+                    <a href="#" class="text-white hover:text-gray-300 transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                    <a href="#" class="text-white hover:text-gray-300 transition"><i class="fa-brands fa-behance"></i></a>
+                </li>
+                <li>
+                    <a href="#" class="text-white hover:text-gray-300 transition"><i class="fa-brands fa-twitter"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="px-4 sm:px-6 md:px-12 lg:px-16 py-12 sm:py-16 max-w-7xl mx-auto">
+
+
+        <section class="flex flex-col lg:flex-row items-center justify-between mb-12 sm:mb-16">
+            <div class="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2">Bruno Nakamura</h1>
+                <h3 class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-4 sm:mb-6 font-ibm-plex-mono">UX / Dev Front-end</h3>
+                <p class="text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">Sou um híbrido raro: Design Systems + Engenharia de Produto. Entrego de ponta a ponta — da descoberta à produção — com métricas de negócio na cabeceira e DX/UX no detalhe. Tradução simultânea entre PMs, Design, Front, Back e Data. Sem teatrinho: shippo, meço, repito.</p>
+                <button class="bg-white text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium hover:bg-gray-200 transition flex items-center justify-center space-x-2 mx-auto lg:mx-0">
+                    <span>Vamos trabalhar juntos</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+            <figure class="lg:w-1/2 flex justify-center">
+                <img src="assets/img/perfil.png" alt="Foto do Bruno Nakamura" class="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover">
+            </figure>
+        </section>
+
+
+        <section class="text-center">
+            <h5 class="text-base sm:text-lg font-medium mb-6 sm:mb-8">Trabalhou em:</h5>
+            <ul class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+                <li><img src="assets/img/img-job-1.svg" alt="" class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"></li>
+                <li><img src="assets/img/img-job-2.svg" alt="" class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"></li>
+                <li><img src="assets/img/img-job-3.svg" alt="" class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"></li>
+                <li><img src="assets/img/img-job-4.svg" alt="" class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"></li>
+                <li><img src="assets/img/img-job-5.svg" alt="" class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"></li>
+            </ul>
+        </section>
+
+
+    </main>
+   
+</body>
+</html>
+
+
+
